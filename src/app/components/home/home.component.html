@@ -1,0 +1,21 @@
+<div class="card-columns mt-5">
+  <div class="col">
+    <div
+      (click)="getIndex(team)"
+      *ngFor="let team of teams"
+      class="card text-white bg-dark mb-5 animate__animated animate__fadeInLeft"
+    >
+      <div class="card-header text-center">
+        <img
+          [src]="team.strTeamBadge"
+          class="card-img-top mt-5 img-fluid img-w"
+        />
+      </div>
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ team.strTeam }}</h5>
+        <p class="card-text">Año de Formación : {{ team.intFormedYear }}</p>
+        <p class="card-text">Localización : {{ team.strStadiumLocation }}</p>
+      </div>
+    </div>
+  </div>
+</div>
